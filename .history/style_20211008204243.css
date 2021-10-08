@@ -169,5 +169,6 @@ ol li {
 }
 
 .theme {
-	float: right;
+	display: block;
+	margin-right: 0;
 }

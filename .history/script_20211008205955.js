@@ -118,33 +118,16 @@ var bright = document.getElementById("bright");
 
 			//Function for dark mode
 			var modeActivated = document.getElementById("theme");
-			modeActivated.addEventListener('change', function() {
-				if (modeActivated.checked) {
+			modeActivated.addEventListener('click', function() {
+				if (!modeActivated.checked) {
 					document.body.style.background = "#fff";
 					let title = document.getElementById("heading-subtext");
 					title.style.color = "black";
-					let options = document.getElementsByClassName("option");
-					for (let i = 0; i < options.length; i++) {
-						options[i].style.color = "black";
-					}
-					let insctruction = document.getElementsByClassName("insctruction");
-					for (let i = 0; i < insctruction.length; i++) {
-						insctruction[i].style.color = "black";
-					}
 				}
-
-				else {
-					document.body.style.background = "black";
-					let title = document.getElementById("heading-subtext");
-					title.style.color = "white";
-					let options = document.getElementsByClassName("option");
-					for (let i = 0; i < options.length; i++) {
-						options[i].style.color = "white";
-					}
-					let insctruction = document.getElementsByClassName("insctruction");
-					for (let i = 0; i < insctruction.length; i++) {
-						insctruction[i].style.color = "white";
-					}
-				}
+				// else {
+				// 	document.body.style.background = "black";
+				// 	let title = document.getElementById("heading-subtext");
+				// 	title.style.color = "white";
+				// }
 				
 			})

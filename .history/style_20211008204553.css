@@ -170,4 +170,6 @@ ol li {
 
 .theme {
 	float: right;
+	/* clear: both; */
+	margin-right: 0;
 }

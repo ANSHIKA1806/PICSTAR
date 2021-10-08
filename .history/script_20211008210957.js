@@ -127,9 +127,9 @@ var bright = document.getElementById("bright");
 					for (let i = 0; i < options.length; i++) {
 						options[i].style.color = "black";
 					}
-					let insctruction = document.getElementsByClassName("insctruction");
-					for (let i = 0; i < insctruction.length; i++) {
-						insctruction[i].style.color = "black";
+					let insctructions = document.getElementsByClassName("instruction")[0];
+					for (let i = 0; i < insctructions.length; i++) {
+						insctructions[i].style.color = "black";
 					}
 				}
 
@@ -140,10 +140,6 @@ var bright = document.getElementById("bright");
 					let options = document.getElementsByClassName("option");
 					for (let i = 0; i < options.length; i++) {
 						options[i].style.color = "white";
-					}
-					let insctruction = document.getElementsByClassName("insctruction");
-					for (let i = 0; i < insctruction.length; i++) {
-						insctruction[i].style.color = "white";
 					}
 				}
 				

@@ -168,6 +168,8 @@ ol li {
 	padding: 10px;
 }
 
-.theme {
+.btn.mode {
+	display: block;
+	margin-right: 0;
 	float: right;
 }
