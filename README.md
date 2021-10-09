@@ -27,3 +27,6 @@ $> live-server
 - [javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## Screenshots
+
+![Screenshot 2021-10-09 at 3 23 15 PM](https://user-images.githubusercontent.com/38236482/136653551-e0418ea2-e5e0-454a-9d71-fb114dada95a.png)
+![Screenshot 2021-10-09 at 3 27 29 PM](https://user-images.githubusercontent.com/38236482/136653569-819a0ec2-3390-40d8-838c-7d57b2397556.png)
