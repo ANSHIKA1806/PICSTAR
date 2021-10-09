@@ -20,11 +20,21 @@
 }
 
 body {
-	background-color: rgb(0, 0, 0);
+	/* background-color: rgb(0, 0, 0); */
+	background: rgb(25,27,34);
+	background: radial-gradient(circle, rgba(25,27,34,1) 80%, rgba(120,0,77,1) 100%);
 	color: #fff;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: bold;
 	font-size: 20px;
+}
+
+.main-container{
+	padding: 3rem;
+}
+
+.heading-container{
+	padding-bottom: 2rem;
 }
 
 #main-heading {
@@ -32,7 +42,10 @@ body {
 	font-weight: 600;
 	text-align: center;
 	margin-top: 20px;
-	color: rgb(68, 82, 251);
+	/* color: rgb(68, 82, 251); */
+	-webkit-text-fill-color: white;
+    -webkit-text-stroke-color: #84009c;
+    -webkit-text-stroke-width: 1px;
 }
 
 #heading-subtext {
@@ -149,6 +162,10 @@ input[type="range"]::-moz-range-thumb {
 
 tr td {
 	padding: 10px;
+}
+
+.instructions-container{
+	padding: 2rem
 }
 
 #instructions-heading {
