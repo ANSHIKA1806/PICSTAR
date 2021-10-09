@@ -6,9 +6,9 @@ This project is an attempt to provide a simple interface for editing photos. It 
 
 ## How to use it
 
-1. Click on "Choose File" to upload the image
+1. Click on "Upload New" to upload the image
 2. Change the settings to make the image suit your needs
-3. Right Click and "Save Image As" to download the image to your local
+3. Click on "Download" to export the image
 
 ## Deployment
 
