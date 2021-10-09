@@ -1,4 +1,6 @@
-# Photo Editor
+## Welcome to PicStar
+
+Like the name implies, ***PicStar*** is an easy to use photo editor that will allow you to be the star of editing pictures. The great thing about this program is that you can focus on a simple, straightforward edit of your photo, and then enjoy it. There are five easy to use editing options with ***PicStar***, that include image inverting, black and white editing, and editing for brightness. ***PicStar*** is also very easily installed on your local machine, making it easy to use for first-time or beginner open source contributors.
 
 With the advent of social media and the rising popularity of platforms such as [Instagram](https://www.instagram.com/), it is no longer uncommon for people to post their photos on social media. However, when sharing photos, it is often difficult to find the right tool to make the most of the photo.
 
