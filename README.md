@@ -22,8 +22,8 @@ $> live-server
 
 ## Tech Stack
 
-- [html]: https://developer.mozilla.org/en-US/docs/Web/HTML
-- [css]: https://developer.mozilla.org/en-US/docs/Web/CSS
-- [javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+- [html](https://developer.mozilla.org/en-US/docs/Web/HTML_
+- [css](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## Screenshots
