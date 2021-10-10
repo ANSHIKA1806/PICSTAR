@@ -2,21 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 ::-webkit-scrollbar {
-	display: none;
-}
-
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  display: none;
 }
 
 * {
-	outline: transparent;
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  outline: transparent;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -49,119 +49,114 @@ body {
 }
 
 #heading-subtext {
-	font-family: 'Ubuntu', sans-serif;
-	text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
 }
 
 .editparts {
-	width: 40%;
-	float: right;
-	padding: 30px;
-	height: 800px;
-}
-
-#imageLoader {
-	background-color: #252932;
-	color: white;
+  width: 40%;
+  float: right;
+  padding: 30px;
+  height: 800px;
 }
 
 canvas {
-	border: 2px solid #4afcff;
-	width: 50%;
-	display: inline-block;
-	margin-top: 50px;
-	height: 40%;
-	margin-left: 30px;
+  border: 1px solid white;
+  display: inline-block;
+  margin-top: 2rem;
 }
 
-input[type="file"] {
-	display: inline-block;
-	margin-bottom: 30px;
-	background-color: #fff;
-	color: #252932;
-	padding: 10px 20px;
-	border-radius: 5px;
+input[type='file'] {
+  display: inline-block;
+  background-color: #fff;
+  color: #252932;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
-input[type="checkbox"] {
-	position: relative;
-	width: 50px;
-	height: 25px;
-	background-color: #49494d;
-	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	border-radius: 20px;
-	transition: 0.5s;
-	cursor: pointer;
-	display: inline-block;
-	margin-right: 20px;
+.icon {
+  font-size: 5rem;
 }
 
-input:checked[type="checkbox"] {
-	background-color: #30fcff;
-	outline: none;
-	padding-left: 10px;
+input[type='checkbox'] {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background-color: #49494d;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
 }
 
-input[type="checkbox"]:before {
-	content: '';
-	width: 25px;
-	height: 25px;
-	border-radius: 50%;
-	background-color: #fff;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-	transition: 0.5s;
+input:checked[type='checkbox'] {
+  background-color: #30fcff;
+  outline: none;
+  padding-left: 10px;
 }
 
-input:checked[type="checkbox"]:before {
-	left: 25px;
-	transition: 0.5s;
+input[type='checkbox']:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
 }
 
-input[type="range"] {
-	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	width: 190px;
-	height: 10px;
-	background-color: #ff4787;
-	border-radius: 20px;
-	outline: transparent;
-	cursor: pointer;
+input:checked[type='checkbox']:before {
+  left: 25px;
+  transition: 0.5s;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	appearance: none;
-	width: 20px;
-	height: 20px;
-	background-color: #ffffff;
-	cursor: pointer;
-	border-radius: 100%;
-	border: none;
-	outline: transparent;
-
+input[type='range'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 2px;
+  width: 65%;
+  margin-top: 2rem;
+  background-color: black;
+  border-radius: 20px;
+  outline: transparent;
+  padding: 0 2em;
+  cursor: pointer;
 }
 
-input[type="range"]::-moz-range-thumb {
-	-moz-appearance: none;
-	appearance: none;
-	width: 20px;
-	height: 20px;
-	background-color: #e1a1ff;
-	cursor: pointer;
-	border-radius: 25%;
-	border: none;
-	outline: transparent;
-	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 100%;
+  outline: transparent;
+}
+
+input[type='range']::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #e1a1ff;
+  cursor: pointer;
+  border-radius: 25%;
+  border: none;
+  outline: transparent;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 tr td {
-	padding: 10px;
+  padding: 10px;
 }
 
 .instructions-container{
@@ -169,18 +164,254 @@ tr td {
 }
 
 #instructions-heading {
-	font-family: 'Raleway', sans-serif;
-	color: rgb(236, 70, 46);
-	margin-top: 20px;
-	margin-left: 30px;
-	font-size: 30px;
+  color: #adc6ff;
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 30px;
 }
 
 #instructions {
-	margin-left: 50px;
-	font-size: 20px;
+  margin-top: 10px;
+  margin-left: 50px;
+  font-size: 20px;
 }
 
 ol li {
-	padding: 10px;
+  padding: 10px;
+}
+
+.main-display {
+  display: flex;
+  flex-direction: column;
+  background-color: #252932;
+  padding: 2em;
+  max-width: 100%;
+}
+
+.viewport {
+  max-height: 60%;
+}
+
+.button-row {
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  width: 100vw;
+}
+
+.tool-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 100;
+  min-height: 6rem;
+  width: 90%;
+  background: linear-gradient(
+    135deg,
+    rgb(0, 0, 0, 0.2) 0%,
+    rgb(0, 0, 0, 0.4) 100%
+  );
+  border-radius: 10px;
+}
+
+.tool-name {
+  padding-top: 1em;
+}
+
+.tools-help {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.right {
+  background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+}
+
+p {
+  font-weight: 100;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.custom-file-upload {
+  cursor: pointer;
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  border-radius: 5px;
+  background-color: #ff57da;
+  border: none;
+}
+
+.download-button {
+  margin-top: 1em;
+  padding: 1rem;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #252932;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background-color: #f8cf40;
+  border: none;
+}
+
+.title {
+  background: linear-gradient(#ff57da, #f8cf40);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fas {
+  margin-right: 0.5em;
+}
+
+.help {
+  font-weight: 100;
+  color: #adc6ff;
+}
+
+a {
+  text-decoration: none;
+  color: #adc6ff;
+}
+
+.maker {
+  margin-top: 2em;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  border-radius: 10px;
+  background-color: #252932;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 1rem;
+  /* width: 95%; */
+  border: 1px solid;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 3rem;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Remove Default Style */
+button,
+input[type='submit'],
+input[type='reset'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+  .main-display {
+    width: 50vw;
+    height: 100vh;
+  }
+
+  .right {
+    width: 50vw;
+  }
+
+  .button-row {
+    display: flex;
+  }
+
+  .download-button {
+    margin-top: 0;
+    margin-left: 1em;
+    width: auto;
+  }
+  .tools {
+    display: grid;
+    width: auto;
+  }
+  .tool {
+    height: 12rem;
+    width: 12rem;
+  }
+  .tool-toggle {
+    flex-direction: column;
+  }
+  .right {
+    height: 100vh;
+  }
+  .tools-help {
+    width: 60%;
+  }
+  .modal-content {
+    max-width: 60%; /* Could be more or less, depending on screen size */
+    padding: 3rem;
+  }
 }
