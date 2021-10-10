@@ -1,5 +1,7 @@
 var bright = document.getElementById('bright');
+var sat = document.getElementById('saturation');
 var bri_c = document.getElementById('bri_check');
+var sat_c = document.getElementById('sat_check');
 var scale = document.getElementById('greyscale');
 var gre_c = document.getElementById('gre_check');
 var cont = document.getElementById('contrast');
@@ -13,6 +15,8 @@ var imageLoader = document.getElementById('imageLoader');
 imageLoader.addEventListener('change', handleImage);
 bright.addEventListener('change', brights);
 bri_c.addEventListener('click', brights);
+sat.addEventListener('change', brights);
+sat_c.addEventListener('click', brights);
 scale.addEventListener('change', brights);
 gre_c.addEventListener('click', brights);
 cont.addEventListener('change', brights);
@@ -79,6 +83,15 @@ function brights() {
     }
   }
   //end Contrast
+  //start Saturation
+  if (sat_c.checked == true) {
+    for (var i = 0; i < mydata.length; i += 4) {
+      
+    }
+    newImage.data = mydata;
+    ctx.putImageData(newImage, 0, 0);
+  }
+  //end saturation
 
   //start invert picture
   if (invert.checked == true) {
