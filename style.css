@@ -165,7 +165,7 @@ ol li {
   display: flex;
   flex-direction: column;
   background-color: #252932;
-  padding: 2em;
+  padding: 2rem;
   max-width: 100%;
 }
 
