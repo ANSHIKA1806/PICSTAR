@@ -21,8 +21,8 @@
 
 body {
 	/* background-color: rgb(0, 0, 0); */
-	background: rgb(25,27,34);
-	background: radial-gradient(circle, rgba(25,27,34,1) 80%, rgba(120,0,77,1) 100%);
+	background: rgb(0,4,78);
+  background: linear-gradient(90deg, rgba(0,4,78,1) 0%, rgba(0,28,33,1) 100%);
 	color: #fff;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: bold;
@@ -90,7 +90,6 @@ input[type='checkbox'] {
   transition: 0.5s;
   cursor: pointer;
   display: inline-block;
-  margin-right: 20px;
 }
 
 input:checked[type='checkbox'] {
@@ -183,9 +182,10 @@ ol li {
 .main-display {
   display: flex;
   flex-direction: column;
-  background-color: #252932;
   padding: 2em;
   max-width: 100%;
+  background: rgb(0,4,78);
+  background: linear-gradient(90deg, rgba(0,4,78,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
 }
 
 .viewport {
@@ -228,7 +228,7 @@ ol li {
   min-height: 6rem;
   width: 90%;
   background: linear-gradient(
-    135deg,
+    312deg,
     rgb(0, 0, 0, 0.2) 0%,
     rgb(0, 0, 0, 0.4) 100%
   );
@@ -278,7 +278,7 @@ input[type='file'] {
   justify-content: center;
   font-weight: 400;
   border-radius: 5px;
-  background-color: #ff57da;
+  background-color: #4b6cb7;
   border: none;
 }
 
@@ -331,7 +331,7 @@ a {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -386,6 +386,7 @@ input[type='reset'] {
 
   .button-row {
     display: flex;
+    flex-direction: row-reverse;
   }
 
   .download-button {
@@ -398,8 +399,8 @@ input[type='reset'] {
     width: auto;
   }
   .tool {
-    height: 12rem;
-    width: 12rem;
+    height: 10rem;
+    width: 10rem;
   }
   .tool-toggle {
     flex-direction: column;
