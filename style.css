@@ -48,9 +48,10 @@ body {
 }
 
 canvas {
-  border: 1px solid white;
+  border: 2px solid #383c47;
   display: inline-block;
   margin-top: 2rem;
+  border-radius: 4px;
 }
 
 input[type='file'] {
@@ -253,6 +254,13 @@ input[type='file'] {
   border-radius: 5px;
   background-color: #ff57da;
   border: none;
+  transition: .3s ease all;
+}
+
+.custom-file-upload:hover {
+  background-color: #d43db4;
+  transform: translateY(-5px);
+
 }
 
 .download-button {
@@ -268,6 +276,13 @@ input[type='file'] {
   border-radius: 5px;
   background-color: #f8cf40;
   border: none;
+  transition: .3s ease all;
+}
+
+.download-button:hover {
+  background-color: #d3b031;
+  transform: translateY(-5px);
+
 }
 
 .title {
