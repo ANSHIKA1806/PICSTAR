@@ -61,9 +61,10 @@ body {
 }
 
 canvas {
-  border: 1px solid white;
+  border: 2px solid #383c47;
   display: inline-block;
   margin-top: 2rem;
+  border-radius: 4px;
 }
 
 input[type='file'] {
@@ -126,7 +127,6 @@ input[type='range'] {
   background-color: black;
   border-radius: 20px;
   outline: transparent;
-  padding: 0 2em;
   cursor: pointer;
 }
 
@@ -182,7 +182,8 @@ ol li {
 .main-display {
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  background-color: #252932;
+  padding: 2rem;
   max-width: 100%;
   background: rgb(0,4,78);
   background: linear-gradient(90deg, rgba(0,4,78,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
@@ -201,16 +202,6 @@ ol li {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
-
-.tools {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  grid-template-columns: auto auto;
-  grid-gap: 20px;
-  width: 100vw;
 }
 
 .tool-toggle {
@@ -235,13 +226,9 @@ ol li {
   border-radius: 10px;
 }
 
-.tool-name {
-  padding-top: 1em;
-}
-
 .tools-help {
   display: flex;
-  width: 80%;
+  width: auto;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1em;
@@ -254,6 +241,12 @@ ol li {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  width: 100vw;
+}
+
+.right-container {
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 h1 {
@@ -280,6 +273,13 @@ input[type='file'] {
   border-radius: 5px;
   background-color: #4b6cb7;
   border: none;
+  transition: .3s ease all;
+}
+
+.custom-file-upload:hover {
+  background-color: #d43db4;
+  transform: translateY(-5px);
+
 }
 
 .download-button {
@@ -295,6 +295,13 @@ input[type='file'] {
   border-radius: 5px;
   background-color: #f8cf40;
   border: none;
+  transition: .3s ease all;
+}
+
+.download-button:hover {
+  background-color: #d3b031;
+  transform: translateY(-5px);
+
 }
 
 .title {
@@ -318,6 +325,7 @@ a {
 
 .maker {
   margin-top: 2em;
+  text-align: center;
 }
 
 /* The Modal (background) */
@@ -371,17 +379,59 @@ input[type='reset'] {
   outline: inherit;
 }
 
-@media (min-width: 768px) {
+.tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+
+@media (max-width: 880px) {
+  input[type='checkbox'] {
+    margin-right: 1rem;
+  }
+  
+  input[type='range'] {
+    margin-bottom: 0.5rem;
+  }
+
+  .main-display {
+    width: 100%;
+  }
+
+  .right-container {
+    margin-top: 2rem;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .tools {
+    width: 100%;
+  }
+
+  .tool {
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    margin-top: 0.5em;
+  }
+
+  .modal-content {
+    max-width: 90%; /* Could be more or less, depending on screen size */
+    padding: 2rem 1rem;
+  }
+}
+
+@media (min-width: 880px) {
   .container {
     flex-direction: row;
   }
+
   .main-display {
     width: 50vw;
-    height: 100vh;
-  }
-
-  .right {
-    width: 50vw;
+    height: 110vh;
   }
 
   .button-row {
@@ -394,23 +444,32 @@ input[type='reset'] {
     margin-left: 1em;
     width: auto;
   }
-  .tools {
-    display: grid;
+
+  .right {
+    width: 50vw;
+  }
+
+  .right-container {
     width: auto;
   }
+
+  .tools {
+    display: grid;
+  }
+  
   .tool {
     height: 10rem;
     width: 10rem;
   }
+
+  .tool-name {
+    padding-top: 1em;
+  }
+
   .tool-toggle {
     flex-direction: column;
   }
-  .right {
-    height: 100vh;
-  }
-  .tools-help {
-    width: 60%;
-  }
+
   .modal-content {
     max-width: 60%; /* Could be more or less, depending on screen size */
     padding: 3rem;

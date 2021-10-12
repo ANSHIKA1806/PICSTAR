@@ -1,18 +1,29 @@
-## 🙋‍♀️ Welcome to PicStar
+## Welcome to PicStar 📸
 
-Like the name implies, [***PicStar***] is an easy to use photo editor that will allow you to be the star of editing pictures. The great thing about this program is that you can focus on a simple, straightforward edit of your photo, and then enjoy it. There are five easy to use editing options with [***PicStar***], that include image inverting, black and white editing, and editing for brightness. [***PicStar***] is also very easily installed on your local machine, making it easy to use for first-time or beginner open source contributors.
+Like the name implies, [***PicStar***] is an easy to use photo editor that will allow you to be the star of editing pictures. The great thing about this program is that you can focus on a simple, straightforward edit of your photo, and then enjoy it. 
+
+There are five easy to use editing options with [***PicStar***], that include image inverting, black and white editing, and editing for brightness. [***PicStar***] is also very easily installed on your local machine, making it easy to use for first-time or beginner open source contributors.
 
 With the advent of social media and the rising popularity of platforms such as [Instagram](https://www.instagram.com/), it is no longer uncommon for people to post their photos on social media. However, when sharing photos, it is often difficult to find the right tool to make the most of the photo.
 
 This project is an attempt to provide a simple interface for editing photos. It is built using HTML, CSS and Javascript. The interface is designed to be as simple as possible and is designed to be as unobtrusive as possible.
 
-**Website - [***PicStar***]**
+**Live Preview - [***PicStar***]**
 
 ## ❓ How to use it
 
 1. Click on "Upload New" to upload the image
 2. Change the settings to make the image suit your needs
 3. Click on "Download" to export the image
+
+## Features 🚀
+
+- Brightness Adjustment
+- Invert
+- Greyscale
+- Black & white
+- Contrast
+- Saturation
 
 ## 🧭 Deployment
 
@@ -30,10 +41,20 @@ $> live-server
 
 ## 📷 Screenshots
 
-![Screenshot 2021-10-09 at 3 23 15 PM](https://user-images.githubusercontent.com/38236482/136653551-e0418ea2-e5e0-454a-9d71-fb114dada95a.png)
-![Screenshot 2021-10-09 at 3 27 29 PM](https://user-images.githubusercontent.com/38236482/136653569-819a0ec2-3390-40d8-838c-7d57b2397556.png)
+![Screenshot 2021-10-09 at 3 23 15 PM](https://i.ibb.co/bg2pRfb/p1.jpg)
+![Screenshot 2021-10-09 at 3 27 29 PM](https://i.ibb.co/WB8WYMd/p2.jpg)
 
-## 📝Contribution
-For contribution please checkout [Contibuting.md](/Contibuting.md)
+## Contribution 📝
 
+Contributions are always welcome!
+
+See [`Contibuting.md`](/Contibuting.md) for ways to get started.
+
+Please adhere to this project's `code of conduct`.
+
+  
 [***PicStar***]: https://anshika1806.github.io/PhotoEditor/
+
+## Feedback 🌟
+
+If you have any feedback, please reach out to us at [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anshika-singh-589922164/)
