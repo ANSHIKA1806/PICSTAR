@@ -23,6 +23,7 @@ This project is an attempt to provide a simple interface for editing photos. It 
 - Greyscale
 - Black & white
 - Contrast
+- Saturation
 
 ## 🧭 Deployment
 
