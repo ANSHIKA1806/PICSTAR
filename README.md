@@ -10,7 +10,7 @@ This project is an attempt to provide a simple interface for editing photos. It 
 
 **Live Preview - [***PicStar***]**
 
-## ❓ How to use it
+## How to use it ❓
 
 1. Click on "Upload New" to upload the image
 2. Change the settings to make the image suit your needs
@@ -25,7 +25,7 @@ This project is an attempt to provide a simple interface for editing photos. It 
 - Contrast
 - Saturation
 
-## 🧭 Deployment
+## Deployment 🧭
 
 You can run this project in development mode using `live-server`
 
@@ -35,14 +35,15 @@ $> cd path/to/project/PhotoEditor
 $> live-server
 ```
 
-## 👩‍💻 Tech Stack
+## Tech Stack 👩‍💻
 
 <img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS" height="50" width="67"/><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML" height="50" width="67"/><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="CSS" height="50" width="67"/>
 
-## 📷 Screenshots
+## Screenshots 📷 
 
-![Screenshot 2021-10-09 at 3 23 15 PM](https://i.ibb.co/bg2pRfb/p1.jpg)
-![Screenshot 2021-10-09 at 3 27 29 PM](https://i.ibb.co/WB8WYMd/p2.jpg)
+<p align="center"><img src="https://i.ibb.co/bg2pRfb/p1.jpg"></p>
+
+<p align="center"><img src="https://i.ibb.co/WB8WYMd/p2.jpg"></p>
 
 ## Contribution 📝
 
@@ -50,11 +51,10 @@ Contributions are always welcome!
 
 See [`Contibuting.md`](/Contibuting.md) for ways to get started.
 
-Please adhere to this project's `code of conduct`.
-
-  
-[***PicStar***]: https://anshika1806.github.io/PhotoEditor/
+Please adhere to this project's [`code of conduct`](/Contibuting.md).
 
 ## Feedback 🌟
 
-If you have any feedback, please reach out to us at [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anshika-singh-589922164/)
+If you have any feedback, please reach out to us at  [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anshika-singh-589922164/)
+
+[***PicStar***]: https://anshika1806.github.io/PhotoEditor/
