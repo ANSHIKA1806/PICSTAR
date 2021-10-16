@@ -24,6 +24,10 @@ cont_ch.addEventListener('click', brights);
 invert.addEventListener('click', brights);
 bw.addEventListener('click', brights);
 
+for (element of document.querySelectorAll('input')) { // set every input's default value
+  element.setAttribute('default', element.value);
+};
+
 var img, mydata;
 function handleImage(e) {
   var reader = new FileReader();
@@ -160,3 +164,22 @@ var download = function () {
 
 const downloadButton = document.getElementById('download-button');
 downloadButton.addEventListener('click', download);
+
+var reset = function () {
+  console.log('reset');
+  for (element of document.querySelectorAll('input')) {
+	if (element.type != 'checkbox') {
+		console.log(element.value)
+		element.value = element.getAttribute('default')
+		console.log(element.value)
+	} else {
+		element.checked = false
+	}
+  }
+  brights()
+};
+
+const resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', reset);
+
+reset() // reset all values upon refreshing (browsers cache the old values)
