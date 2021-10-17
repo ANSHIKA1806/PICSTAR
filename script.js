@@ -89,8 +89,28 @@ function brights() {
   //end Contrast
   //start Saturation
   if (sat_c.checked == true) {
+    let sv = Number(sat.value);
+    var luR = 0.3086; // constant to determine luminance of red
+    var luG = 0.6094; // constant to determine luminance of green
+    var luB = 0.0820; // constant to determine luminance of blue
+    var az = (1 - sv)*luR + sv;
+    var bz = (1 - sv)*luG;
+    var cz = (1 - sv)*luB;
+    var dz = (1 - sv)*luR;
+    var ez = (1 - sv)*luG + sv;
+    var fz = (1 - sv)*luB;
+    var gz = (1 - sv)*luR;
+    var hz = (1 - sv)*luG;
+    var iz = (1 - sv)*luB + sv;
+
     for (var i = 0; i < mydata.length; i += 4) {
-      
+       var red = mydata[i]; // Extract original red color [0 to 255]
+       var green = mydata[i + 1]; // Extract original green color [0 to 255]
+       var blue = mydata[i + 2]; // Extract original blue color [0 to 255]
+
+       mydata[i] = (az*red + bz*green + cz*blue);
+       mydata[i + 1] = (dz*red + ez*green + fz*blue);
+       mydata[i + 2] = (gz*red + hz*green + iz*blue);
     }
     newImage.data = mydata;
     ctx.putImageData(newImage, 0, 0);
