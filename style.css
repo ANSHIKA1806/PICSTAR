@@ -431,7 +431,7 @@ input[type='reset'] {
 
   .main-display {
     width: 50vw;
-    height: 110vh;
+    height: 100vh;
   }
 
   .button-row {
@@ -447,6 +447,7 @@ input[type='reset'] {
 
   .right {
     width: 50vw;
+    height: 100vh;
   }
 
   .right-container {
