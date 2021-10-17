@@ -1,5 +1,7 @@
 var bright = document.getElementById('bright');
+var sat = document.getElementById('saturation');
 var bri_c = document.getElementById('bri_check');
+var sat_c = document.getElementById('sat_check');
 var scale = document.getElementById('greyscale');
 var gre_c = document.getElementById('gre_check');
 var cont = document.getElementById('contrast');
@@ -13,12 +15,18 @@ var imageLoader = document.getElementById('imageLoader');
 imageLoader.addEventListener('change', handleImage);
 bright.addEventListener('change', brights);
 bri_c.addEventListener('click', brights);
+sat.addEventListener('change', brights);
+sat_c.addEventListener('click', brights);
 scale.addEventListener('change', brights);
 gre_c.addEventListener('click', brights);
 cont.addEventListener('change', brights);
 cont_ch.addEventListener('click', brights);
 invert.addEventListener('click', brights);
 bw.addEventListener('click', brights);
+
+for (element of document.querySelectorAll('input')) { // set every input's default value
+  element.setAttribute('default', element.value);
+};
 
 var img, mydata;
 function handleImage(e) {
@@ -79,6 +87,35 @@ function brights() {
     }
   }
   //end Contrast
+  //start Saturation
+  if (sat_c.checked == true) {
+    let sv = Number(sat.value);
+    var luR = 0.3086; // constant to determine luminance of red
+    var luG = 0.6094; // constant to determine luminance of green
+    var luB = 0.0820; // constant to determine luminance of blue
+    var az = (1 - sv)*luR + sv;
+    var bz = (1 - sv)*luG;
+    var cz = (1 - sv)*luB;
+    var dz = (1 - sv)*luR;
+    var ez = (1 - sv)*luG + sv;
+    var fz = (1 - sv)*luB;
+    var gz = (1 - sv)*luR;
+    var hz = (1 - sv)*luG;
+    var iz = (1 - sv)*luB + sv;
+
+    for (var i = 0; i < mydata.length; i += 4) {
+       var red = mydata[i]; // Extract original red color [0 to 255]
+       var green = mydata[i + 1]; // Extract original green color [0 to 255]
+       var blue = mydata[i + 2]; // Extract original blue color [0 to 255]
+
+       mydata[i] = (az*red + bz*green + cz*blue);
+       mydata[i + 1] = (dz*red + ez*green + fz*blue);
+       mydata[i + 2] = (gz*red + hz*green + iz*blue);
+    }
+    newImage.data = mydata;
+    ctx.putImageData(newImage, 0, 0);
+  }
+  //end saturation
 
   //start invert picture
   if (invert.checked == true) {
@@ -147,3 +184,22 @@ var download = function () {
 
 const downloadButton = document.getElementById('download-button');
 downloadButton.addEventListener('click', download);
+
+var reset = function () {
+  console.log('reset');
+  for (element of document.querySelectorAll('input')) {
+	if (element.type != 'checkbox') {
+		console.log(element.value)
+		element.value = element.getAttribute('default')
+		console.log(element.value)
+	} else {
+		element.checked = false
+	}
+  }
+  brights()
+};
+
+const resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', reset);
+
+reset() // reset all values upon refreshing (browsers cache the old values)

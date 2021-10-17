@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PicStar Image Editor</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -35,7 +36,7 @@
 		</div>
       </div>
       <div class="right">
-        <div class="tools-help"><h2>Tools</h2><button id="myBtn"><span class="help"><i class="fas fa-info-circle"></i>How to Use</span></button></div>
+        <div class="tools-help"><h2>Tools &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2><button id="myBtn"><span class="help"><i class="fas fa-info-circle"></i>How to Use</span></button></div>
         <div class="tools">
           <div class="tool">
             <div class='tool-toggle'><input type="checkbox" id="bri_check" />
@@ -65,8 +66,13 @@
             <p class="tool-name">Black and White</p>
             </div>
           </div>
-          <div class="tool">Coming Soon</div>
+          <div class="tool">
+            <div class='tool-toggle'><input type="checkbox" id="sat_check" />
+            <p class="tool-name">Saturation</p>
+            <input type="range" min="0" max="2" step="0.01" id="saturation" />
+          </div>
         </div>
+		<a id="reset">Reset all Values</a>
         <h4 class="maker">
           Made by<a
             href="https://www.linkedin.com/in/anshika-singh-589922164/"
