@@ -61,7 +61,7 @@ body {
 }
 
 canvas {
-  border: 2px solid #383c47;
+  border: 3px dashed #6f7996;
   display: inline-block;
   margin-top: 2rem;
   border-radius: 4px;
@@ -185,8 +185,9 @@ ol li {
   background-color: #252932;
   padding: 2rem;
   max-width: 100%;
-  background: rgb(0,4,78);
-  background: linear-gradient(90deg, rgba(0,4,78,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
+  opacity: 1;
+  background-image: radial-gradient(#8b8dc8 0.5px, #04003c 0.5px);
+  background-size: 10px 10px;
 }
 
 .viewport {
@@ -224,6 +225,7 @@ ol li {
     rgb(0, 0, 0, 0.4) 100%
   );
   border-radius: 10px;
+  border: 0.5px dashed #acc1f3;
 }
 
 .tools-help {
@@ -346,10 +348,11 @@ a {
 .modal-content {
   border-radius: 10px;
   background-color: #252932;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 12% auto; /* 12% from the top and centered */
   padding: 1rem;
   /* width: 95%; */
   border: 1px solid;
+  position: relative;
 }
 
 /* The Close Button */
@@ -357,11 +360,14 @@ a {
   color: #aaa;
   float: right;
   font-size: 3rem;
+  position: absolute;
+  right: 24px;
+  top: 10px;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: rgb(99, 99, 99);
   text-decoration: none;
   cursor: pointer;
 }
@@ -480,3 +486,4 @@ input[type='reset'] {
 #reset {
 	cursor: pointer;
 }
+
