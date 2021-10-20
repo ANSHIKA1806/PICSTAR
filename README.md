@@ -58,3 +58,8 @@ Please adhere to this project's [`code of conduct`](/Contibuting.md).
 If you have any feedback, please reach out to us at  [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anshika-singh-589922164/)
 
 [***PicStar***]: https://anshika1806.github.io/PhotoEditor/
+
+
+## Contact the Administrator
+
+https://anshika-singh-portfolio-website.netlify.app/
