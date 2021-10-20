@@ -150,6 +150,7 @@ tr td {
   margin-top: 20px;
   margin-left: 30px;
   font-size: 30px;
+  border-bottom: solid;
 }
 
 #instructions {
