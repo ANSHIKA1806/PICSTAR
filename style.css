@@ -185,6 +185,7 @@ ol li {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background-color: rgb(37, 41, 50);
 }
 
 .tool-toggle {
