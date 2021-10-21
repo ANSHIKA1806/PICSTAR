@@ -52,6 +52,7 @@ canvas {
   display: inline-block;
   margin-top: 2rem;
   border-radius: 4px;
+  background: url('public/image-illustration.svg') no-repeat center;
 }
 
 input[type='file'] {

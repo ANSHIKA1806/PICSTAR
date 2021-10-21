@@ -64,11 +64,13 @@ function dragEnter(e) {
 function dragOver(e) {
   e.stopPropagation();
   e.preventDefault();
+  e.currentTarget.style.background = "url('public/image-illustration2.svg') no-repeat center #595959";
 }
 
 function dragLeave(e) {
   e.stopPropagation();
   e.preventDefault();
+  e.currentTarget.style.background = "url('public/image-illustration.svg') no-repeat center";
 }
 
 
