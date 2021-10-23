@@ -24,6 +24,12 @@ cont_ch.addEventListener('click', brights);
 invert.addEventListener('click', brights);
 bw.addEventListener('click', brights);
 
+//Listeners for drag and drop events
+canvas.addEventListener('dragenter', dragEnter, false);
+canvas.addEventListener('dragover', dragOver, false);
+canvas.addEventListener('drop', drop, false);
+canvas.addEventListener('dragleave', dragLeave, false);
+
 for (element of document.querySelectorAll('input')) { // set every input's default value
   element.setAttribute('default', element.value);
 };
@@ -46,6 +52,49 @@ function handleImage(e) {
   };
   if (e.target.id == 'imageLoader') {
     reader.readAsDataURL(e.target.files[0]);
+  }
+}
+
+//Drag and Drop Functionality
+function dragEnter(e) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+
+function dragOver(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  e.currentTarget.style.background = "url('public/image-illustration2.svg') no-repeat center #595959";
+}
+
+function dragLeave(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  e.currentTarget.style.background = "url('public/image-illustration.svg') no-repeat center";
+}
+
+
+function drop (e){
+  e.stopPropagation();
+  e.preventDefault();
+  var reader = new FileReader();
+
+  var dt = e.dataTransfer;
+  var file = dt.items[0].getAsFile();
+  reader.readAsDataURL(file);
+
+  reader.onload = function(e){
+    img = new Image();
+    img.onload = function () {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+      newImage = ctx.getImageData(0, 0, 800, 400);
+      mydata = newImage.data;
+      newImage.data = mydata;
+      ctx.putImageData(newImage, 0, 0);
+    };
+    img.src = e.target.result;
   }
 }
 
