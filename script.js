@@ -10,6 +10,7 @@ var invert = document.getElementById('invert');
 var bw = document.getElementById('bwhite');
 var ctx = document.getElementById('canvas').getContext('2d');
 var canvas = document.getElementById('canvas');
+var is_img = false;
 
 var imageLoader = document.getElementById('imageLoader');
 imageLoader.addEventListener('change', handleImage);
@@ -34,6 +35,22 @@ for (element of document.querySelectorAll('input')) { // set every input's defau
   element.setAttribute('default', element.value);
 };
 
+function enable() {
+}
+
+function enable_or_disable() {
+  if (is_img == true)
+  {
+    console.log("Image present enabling Toolbox and Download Button");
+    document.getElementById("tools-container").classList.remove('disabled');
+    document.getElementById("download-button").style.display = 'block';
+  }
+  else
+  {
+    console.log("No image selected hiding Toolbox and Download Button");
+  }
+}
+
 var img, mydata;
 function handleImage(e) {
   var reader = new FileReader();
@@ -49,6 +66,8 @@ function handleImage(e) {
       ctx.putImageData(newImage, 0, 0);
     };
     img.src = event.target.result;
+    is_img = true;
+    enable_or_disable();
   };
   if (e.target.id == 'imageLoader') {
     reader.readAsDataURL(e.target.files[0]);
@@ -95,6 +114,8 @@ function drop (e){
       ctx.putImageData(newImage, 0, 0);
     };
     img.src = e.target.result;
+    is_img = true;
+    enable_or_disable();
   }
 }
 

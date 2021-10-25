@@ -14,96 +14,98 @@
     
   </head>
 
-  <body>
-    <div>
+  <body onload="enable_or_disable();">
     <div class="container">
       <div class="main-display">
         <h1 class="title">PicStar</h1>
-        <p id="">Photo Editing. Simplified.</p>
+        <p>Photo Editing. Simplified.</p>
         <!-- <img src="/public/sample.jpeg"  class="viewport"/> -->
         <canvas id="canvas" class="viewport"></canvas>
         <div class="button-row">
-            <label class="custom-file-upload">
-              <input
-              type="file"
-              id="imageLoader"
-              name="imageLoader"
-              value="upload picture"
-		     accept="image/*"
-            />
-              <span><i class="fas fa-cloud-upload-alt"></i>Upload New</span>
+          <label class="custom-file-upload">
+            <input type="file" id="imageLoader" name="imageLoader" value="upload picture" accept="image/*" />
+            <span><i class="fas fa-cloud-upload-alt"></i>Upload New</span>
           </label>
           <button class="download-button" id="download-button"><span><i class="fas fa-cloud-download-alt"></i>Download</span></button>
         </div>
       </div>
       <div class="right">
-        <div class="tools-help"><h2>Tools &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2><button id="myBtn"><span class="help"><i class="fas fa-info-circle"></i>Usage Instructions</span></button></div>
-        <div class="tools">
-          <div class="tool">
-            <div class='tool-toggle'><input type="checkbox" id="bri_check" />
-            <p class="tool-name">Brightness</p>
-            </div>
-            <input type="range" min="0" max="1" step="0.01" id="bright" />
+        <div id="tools-container" class="disabled">
+          <div class="tools-help">
+            <h2>Tools &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <button id="myBtn"><span class="help"><i class="fas fa-info-circle"></i>Usage Instructions</span></button>
           </div>
-          <div class="tool">
-            <div class='tool-toggle'><input type="checkbox" id="gre_check" />
-            <p class="tool-name">GreyScale</p>
+          <div class="tools">
+            <div class="tool">
+              <div class='tool-toggle'>
+                <input type="checkbox" id="bri_check" />
+                <p class="tool-name">Brightness</p>
+              </div>
+              <input type="range" min="0" max="1" step="0.01" id="bright" />
             </div>
-            <input type="range" min="0" max="3" step="0.3" id="greyscale" />
-          </div>
-          <div class="tool">
-            <div class='tool-toggle'><input type="checkbox" id="cont_check" />
-            <p class="tool-name">Contrast</p>
+            <div class="tool">
+              <div class='tool-toggle'>
+                <input type="checkbox" id="gre_check" />
+                <p class="tool-name">GreyScale</p>
+              </div>
+              <input type="range" min="0" max="3" step="0.3" id="greyscale" />
             </div>
-            <input type="range" min="0" max="500" step="1" id="contrast" />
-          </div>
-          <div class="tool">
-            <div class='tool-toggle'><input type="checkbox" id="invert" />
-            <p class="tool-name">Invert</p>
+            <div class="tool">
+              <div class='tool-toggle'>
+                <input type="checkbox" id="cont_check" />
+                <p class="tool-name">Contrast</p>
+              </div>
+              <input type="range" min="0" max="500" step="1" id="contrast" />
+            </div>
+            <div class="tool">
+              <div class='tool-toggle'>
+                <input type="checkbox" id="invert" />
+                <p class="tool-name">Invert</p>
+              </div>
+            </div>
+            <div class="tool">
+              <div class='tool-toggle'>
+                <input type="checkbox" id="bwhite" />
+                <p class="tool-name">Black and White</p>
+              </div>
+            </div>
+            <div class="tool">
+              <div class='tool-toggle'>
+                <input type="checkbox" id="sat_check" />
+                <p class="tool-name">Saturation</p>
+              </div>
+              <input type="range" min="0" max="2" step="0.01" id="saturation" />
             </div>
           </div>
-          <div class="tool">
-            <div class='tool-toggle'><input type="checkbox" id="bwhite" />
-            <p class="tool-name">Black and White</p>
-            </div>
-          </div>
-          <div class="tool">
-            <div class='tool-toggle'><input type="checkbox" id="sat_check" />
-            <p class="tool-name">Saturation</p>
-            <input type="range" min="0" max="2" step="0.01" id="saturation" />
+          <div class="reset">
+            <h4><a id="reset">Reset all Values</a></h4>
           </div>
         </div>
-		<a id="reset">Reset all Values</a>
-        <h4 class="maker">
-          Made by<a
-            href="https://www.linkedin.com/in/anshika-singh-589922164/"
-            target="_blank"
-          >
-            &copy; Anshika 🌸</a
-          >
-          <br>
-          Find us at <a href="https://github.com/ANSHIKA1806/PhotoEditor" target=blank><ion-icon name="logo-github"></ion-icon></a>
-          <a></a>
-        </h4>
+      </div>
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 id="instructions-heading">Instructions</h3>
+          <h4 id="instructions">
+            <ol>
+              <li>Upload an image of .jpg or .png format</li>
+              <li>Click on the toggle buttons to apply the features</li>
+              <li>Drag the slider until you get a statisfying image</li>
+              <li>Click on Download to export the image</li>
+            </ol>
+          </h4>
+        </div>
       </div>
     </div>
-
-    <div id="myModal" class="modal">
-
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3 id="instructions-heading">Instructions</h3>
-        <h4 id="instructions">
-          <ol>
-            <li>Upload an image of .jpg or .png format</li>
-            <li>Click on the toggle buttons to apply the features</li>
-            <li>Drag the slider until you get a statisfying image</li>
-            <li>Click on Download to export the image</li>
-          </ol>
-        </h4>
-      </div>
-
+    <div class="footer">
+      <h4 class="maker">
+        Made by
+        <a href="https://www.linkedin.com/in/anshika-singh-589922164/" target="_blank">&copy; Anshika 🌸</a>
+        <br>
+        Find us at <a href="https://github.com/ANSHIKA1806/PhotoEditor" target=blank><ion-icon name="logo-github"></ion-icon></a>
+      </h4>
+    </div>
     <script src="./script.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
