@@ -177,6 +177,7 @@ ol li {
 }
 
 .button-row {
+  justify-content: space-evenly;
   margin-top: 2rem;
 }
 
@@ -267,6 +268,7 @@ input[type='file'] {
 }
 
 .download-button {
+  display: none;
   margin-top: 1em;
   padding: 1rem;
   width: 100%;
@@ -307,8 +309,8 @@ a {
   color: #adc6ff;
 }
 
-.maker {
-  margin-top: 2em;
+.footer {
+  padding: 15px 0px;
   text-align: center;
 }
 
@@ -415,7 +417,7 @@ input[type='reset'] {
 
   .main-display {
     width: 50vw;
-    height: 110vh;
+    height: 100vh;
   }
 
   .button-row {
@@ -430,6 +432,7 @@ input[type='reset'] {
 
   .right {
     width: 50vw;
+    height: 100vh;
   }
 
   .right-container {
@@ -459,6 +462,16 @@ input[type='reset'] {
   }
 }
 
+.reset {
+  margin-top: 10px;
+  text-align: center;
+}
+
 #reset {
 	cursor: pointer;
+}
+
+.disabled {
+  pointer-events:none; 
+  opacity: 0.4;
 }
