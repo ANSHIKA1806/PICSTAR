@@ -148,12 +148,22 @@ function brights() {
   //end grey scale
 
   //start Contrast
+  function Truncate(value) {
+     if (value < 0.0) {
+       value = 0.0;
+     } else if (value > 255.0) {
+       value = 255.0;
+     }
+     return value;
+  }
+
   if (cont_ch.checked == true) {
+    var contrast = parseInt(cont.value, 10);
     for (var i = 0; i < mydata.length; i += 4) {
-      var factor = (259 * (cont.value + 255)) / (255 * (259 - cont.value));
-      mydata[i] = factor * (mydata[i] - 128) + 128;
-      mydata[i + 1] = factor * (mydata[i + 1] - 128) + 128;
-      mydata[i + 2] = factor * (mydata[i + 2] - 128) + 128;
+      var factor = (259.0 * (contrast + 255.0)) / (255.0 * (259.0 - contrast));
+      mydata[i] = Truncate(factor * (mydata[i] - 128.0) + 128.0);
+      mydata[i + 1] = Truncate(factor * (mydata[i + 1] - 128.0) + 128.0);
+      mydata[i + 2] = Truncate(factor * (mydata[i + 2] - 128.0) + 128.0);
     }
   }
   //end Contrast
