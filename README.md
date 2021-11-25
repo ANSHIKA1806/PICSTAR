@@ -45,13 +45,7 @@ $> live-server
 
 <p align="center"><img src="https://i.ibb.co/WB8WYMd/p2.jpg"></p>
 
-## Contribution 📝
 
-Contributions are always welcome!
-
-See [`Contibuting.md`](/Contibuting.md) for ways to get started.
-
-Please adhere to this project's [`code of conduct`](/Contibuting.md).
 
 ## Feedback 🌟
 
