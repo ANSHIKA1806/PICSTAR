@@ -39,12 +39,12 @@ $> live-server
 
 <img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS" height="50" width="67"/><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML" height="50" width="67"/><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="CSS" height="50" width="67"/>
 
-## Screenshots 📷 
+<!-- ## Screenshots 📷 
 
 <p align="center"><img src="https://i.ibb.co/bg2pRfb/p1.jpg"></p>
 
 <p align="center"><img src="https://i.ibb.co/WB8WYMd/p2.jpg"></p>
-
+ -->
 
 
 ## Feedback 🌟
