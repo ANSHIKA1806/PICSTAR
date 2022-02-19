@@ -53,7 +53,7 @@ If you have any feedback, please reach out to us at  [![linkedin](https://img.sh
 
 [***PicStar***]: https://anshika1806.github.io/PhotoEditor/
 
-
+<!-- 
 ## Contact the Administrator
 
-https://anshika-singh-portfolio-website.netlify.app/
+https://anshika-singh-portfolio-website.netlify.app/ -->
